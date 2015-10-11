@@ -13,26 +13,11 @@ public class ProcesoTexto {
 	static HashMap<Character, BigDecimal> calculoEstadistica(HashMap<Character, Integer> mapaTexto, Double acum){
 		
 		
-		//mostrarTotal(h);
+
 		System.out.println("total: " + acum);
 		return calculoFrecuencia(mapaTexto, acum);
 		
 		
-	}
-	
-	static void mostrarTotal(HashMap<Character, Integer> h){
-		
-		Set<Entry<Character, Integer>> freq = h.entrySet();
-	    
-		Iterator<Entry<Character, Integer>> it = freq.iterator();
- 
-		
-		while ( it.hasNext() ) {
-			Entry<Character, Integer> item = it.next();
-			//System.out.println ( item.getKey() + ": " + item.getValue() );
-			
-		}
-
 	}
 	
 	
@@ -58,24 +43,9 @@ public class ProcesoTexto {
 			
 			
 		}
-		//mostrarTotalLetras(porc);
+		
 		
 		return porc;
-
-	}
-
-	@SuppressWarnings("unused")
-	private static void mostrarTotalLetras(HashMap<Character, BigDecimal> fre) {
-		Set<Entry<Character, BigDecimal>> freq = fre.entrySet();
-	    
-		Iterator<Entry<Character, BigDecimal>> it = freq.iterator();
- 
-		
-		while ( it.hasNext() ) {
-			Entry<Character, BigDecimal> item = it.next();
-			System.out.println ( item.getKey() + ": " + item.getValue() );
-			
-		}
 
 		
 	}

@@ -57,24 +57,6 @@ public class LeerTabla {
 		
 	}
 
-	
-
-	@SuppressWarnings("unused")
-	private static void mostrarAbecedario(HashMap<Character, BigDecimal> mapaLetraI) {
-		Set<Entry<Character, BigDecimal>> freq = mapaLetraI.entrySet();
-	    
-		Iterator<Entry<Character, BigDecimal>> it = freq.iterator();
- 
-		
-		while ( it.hasNext() ) {
-			Entry<Character, BigDecimal> item = it.next();
-			 System.out.println ( item.getKey() + ": " + item.getValue() );
-			
-		}
-		
-		
-	}
-
 	private static HashMap<Character, BigDecimal> cargarAbecedario(
 			
 			String[] parts) {

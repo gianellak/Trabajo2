@@ -27,8 +27,8 @@ public class Programa {
 		//FileReader file = new FileReader("C:\\Users\\Yo\\Desktop\\donQuijote.txt");
 	
 		//FileReader file = new FileReader("C:\\Users\\Yo\\Desktop\\Shakespeare.txt");
-		FileReader file = new FileReader("C:\\Users\\Yo\\Desktop\\bovary.txt");
-		//FileReader file = new FileReader("C:\\Users\\Yo\\Desktop\\Movimientos.txt");
+		//FileReader file = new FileReader("C:\\Users\\Yo\\Desktop\\bovary.txt");
+		FileReader file = new FileReader("C:\\Users\\Yo\\Desktop\\Movimientos.txt");
 		FileReader tabla = new FileReader ("C:\\Users\\Yo\\Desktop\\letras.txt");
 
 		
@@ -96,20 +96,16 @@ public class Programa {
 		Double acum = (double) 0;
 		
 		for (DBObject o : out.results()) {
-		
-			acum = acum + (double) o.get("value");
-			
-			//System.out.println(o.get("value"));
 			
 			char letra = o.get("_id").toString().charAt(0); 
 			
 			Double d = (Double) o.get("value");
 			
+			acum = acum + d;
+			
 			Integer valor = d.intValue();
 			
 			mapaTexto.put( letra , valor );
-			
-			//System.out.println(acum);
 			
 			
 		}
